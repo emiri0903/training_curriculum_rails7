@@ -12,7 +12,12 @@
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
+
+          <%= day[:month] %>/<%= day[:date] %><%= day[:wday]%>
+        </div>
+
           <%= "#{day[:month]}/#{day[:date]}" %> 
+
         <ul class='content'>
           <% if day[:plans].present? %>
             <% day[:plans].each do |plan| %>
